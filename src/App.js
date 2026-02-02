@@ -74,7 +74,7 @@ function App() {
     };
 
     const handleDiscountChange = (e) => {
-        const { name, value, type } = e.target;
+        const { name, value } = e.target;
         if (name === 'discountType') {
             setDiscount(prev => ({ ...prev, type: value }));
         } else {
@@ -297,6 +297,7 @@ function App() {
     };
 
      // --- Print Functionality ---
+     // eslint-disable-next-line no-unused-vars
      const handlePrint = useReactToPrint({
         content: () => invoiceRef.current,
      });
